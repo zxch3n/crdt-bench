@@ -10,112 +10,112 @@
       "ywasm": "8746 bytes"
     },
     "[B1.1] Append N characters (time)": {
-      "ywasm": "94 ms"
+      "loro": "62 ms"
     },
     "[B1.1] Append N characters (avgUpdateSize)": {
-      "ywasm": "27 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.1] Append N characters (encodeTime)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.1] Append N characters (docSize)": {
-      "ywasm": "6031 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.1] Append N characters (memUsed)": {
-      "ywasm": "0 B"
+      "loro": "39.3 kB"
     },
     "[B1.1] Append N characters (parseTime)": {
-      "ywasm": "0 ms"
+      "loro": "1 ms"
     },
     "[B1.2] Insert string of length N (time)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.2] Insert string of length N (avgUpdateSize)": {
-      "ywasm": "6031 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.2] Insert string of length N (encodeTime)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.2] Insert string of length N (docSize)": {
-      "ywasm": "6031 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.2] Insert string of length N (memUsed)": {
-      "ywasm": "416 B"
+      "loro": "15.5 kB"
     },
     "[B1.2] Insert string of length N (parseTime)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.3] Prepend N characters (time)": {
-      "ywasm": "16 ms"
+      "loro": "314 ms"
     },
     "[B1.3] Prepend N characters (avgUpdateSize)": {
-      "ywasm": "26 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.3] Prepend N characters (encodeTime)": {
-      "ywasm": "0 ms"
+      "loro": "18 ms"
     },
     "[B1.3] Prepend N characters (docSize)": {
-      "ywasm": "6040 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.3] Prepend N characters (memUsed)": {
-      "ywasm": "0 B"
+      "loro": "11.1 MB"
     },
     "[B1.3] Prepend N characters (parseTime)": {
-      "ywasm": "1 ms"
+      "loro": "81 ms"
     },
     "[B1.4] Insert N characters at random positions (time)": {
-      "ywasm": "81 ms"
+      "loro": "341 ms"
     },
     "[B1.4] Insert N characters at random positions (avgUpdateSize)": {
-      "ywasm": "29 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.4] Insert N characters at random positions (encodeTime)": {
-      "ywasm": "0 ms"
+      "loro": "23 ms"
     },
     "[B1.4] Insert N characters at random positions (docSize)": {
-      "ywasm": "29554 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.4] Insert N characters at random positions (memUsed)": {
-      "ywasm": "0 B"
+      "loro": "11.3 MB"
     },
     "[B1.4] Insert N characters at random positions (parseTime)": {
-      "ywasm": "3 ms"
+      "loro": "103 ms"
     },
     "[B1.5] Insert N words at random positions (time)": {
-      "ywasm": "269 ms"
+      "loro": "396 ms"
     },
     "[B1.5] Insert N words at random positions (avgUpdateSize)": {
-      "ywasm": "36 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.5] Insert N words at random positions (encodeTime)": {
-      "ywasm": "1 ms"
+      "loro": "23 ms"
     },
     "[B1.5] Insert N words at random positions (docSize)": {
-      "ywasm": "87924 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.5] Insert N words at random positions (memUsed)": {
-      "ywasm": "0 B"
+      "loro": "16.4 MB"
     },
     "[B1.5] Insert N words at random positions (parseTime)": {
-      "ywasm": "5 ms"
+      "loro": "123 ms"
     },
     "[B1.6] Insert string, then delete it (time)": {
-      "ywasm": "0 ms"
+      "loro": "1 ms"
     },
     "[B1.6] Insert string, then delete it (avgUpdateSize)": {
-      "ywasm": "6053 bytes"
+      "loro": "NaN bytes"
     },
     "[B1.6] Insert string, then delete it (encodeTime)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.6] Insert string, then delete it (docSize)": {
-      "ywasm": "38 bytes"
+      "loro": "undefined bytes"
     },
     "[B1.6] Insert string, then delete it (memUsed)": {
-      "ywasm": "776 B"
+      "loro": "19.8 kB"
     },
     "[B1.6] Insert string, then delete it (parseTime)": {
-      "ywasm": "0 ms"
+      "loro": "0 ms"
     },
     "[B1.7] Insert/Delete strings at random positions (time)": {
       "ywasm": "77 ms"
@@ -352,22 +352,22 @@
       "ywasm": "2 ms"
     },
     "[B4] Apply real-world editing dataset (time)": {
-      "ywasm": "24127 ms"
+      "loro": "826 ms"
     },
     "[B4] Apply real-world editing dataset (avgUpdateSize)": {
       "yjs": "29 bytes"
     },
     "[B4] Apply real-world editing dataset (encodeTime)": {
-      "ywasm": "2 ms"
+      "loro": "131 ms"
     },
     "[B4] Apply real-world editing dataset (docSize)": {
-      "ywasm": "159928 bytes"
+      "loro": "undefined bytes"
     },
     "[B4] Apply real-world editing dataset (memUsed)": {
-      "ywasm": "848 B"
+      "loro": "39 MB"
     },
     "[B4] Apply real-world editing dataset (parseTime)": {
-      "ywasm": "12 ms"
+      "loro": "1332 ms"
     },
     "[B4x100] Apply real-world editing dataset 100 times (time)": {
       "ywasm": "1505161 ms"
