@@ -5,10 +5,8 @@
   "main": "./run.js",
   "type": "module",
   "scripts": {
-    "clean": "rm -rf dist",
-    "start": "([ -f \"./dist/bundle.js\" ] || npm run dist) && node ../../bin/measure-bundle.js && node run.js && node --expose-gc run.js mem-only && npm run table",
-    "table": "echo 'Loro Wasm results: \n\n' && node ../../bin/render-table.js ../results.json 6000 loro-wasm",
-    "dist": "npm run clean && rollup -c && gzip --keep dist/*"
+    "start": "node --experimental-specifier-resolution=node run.js && node --expose-gc --experimental-specifier-resolution=node run.js mem-only && npm run table",
+    "table": "echo 'Loro results: \n\n' && node ../../bin/render-table.js ../results.json 6000 loro-wasm"
   },
   "author": "Zixuan Chen",
   "license": "MIT",
