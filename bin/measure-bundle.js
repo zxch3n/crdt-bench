@@ -10,7 +10,7 @@ const name = pkgLock.name
 const bundleSize = fs.statSync(join(currDir, '/dist/bundle.js')).size
 const gzBundleSize = fs.statSync(join(currDir, '/dist/bundle.js.gz')).size
 
-const version = pkgLock.dependencies[name].version
+const version = ( pkgLock.dependencies[name] && pkgLock.dependencies[name].version ) || "1.0.0"
 
 setBenchmarkResult(name, 'Version', version)
 setBenchmarkResult(name, 'Bundle size', `${bundleSize} bytes`)
