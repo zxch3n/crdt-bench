@@ -41,8 +41,10 @@ export class LoroWasm {
   }
 
   update() {
-    if (this.updateHandler) this.updateHandler(this.doc.exportUpdates(this.version));
-    this.version = this.doc.version();
+    if (this.updateHandler) {
+      this.updateHandler(this.doc.exportUpdates(this.version));
+      this.version = this.doc.version();
+    }
   }
 
   /**
