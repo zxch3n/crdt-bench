@@ -188,7 +188,7 @@ export const runBenchmarksB1 = async (crdtFactory, filter) => {
   // benchmarks with numbers begin here
 
   await runBenchmark('[B1.8] Append N numbers', filter, benchmarkName => {
-    const numbers = Array.from({ length: N }).map(() => prng.uint32(gen, 0, 0x7fffffff))
+    const numbers = Array.from({ length: N }).map(() => prng.uint32(gen, 0, 0x0000ffff))
     benchmarkTemplate(
       benchmarkName,
       numbers,

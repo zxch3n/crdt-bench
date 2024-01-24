@@ -1,1 +1,1 @@
-export * from 'loro-wasm'
+export * from 'loro-js'

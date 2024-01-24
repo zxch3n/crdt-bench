@@ -26,13 +26,13 @@ export const writeBenchmarkResultsToFile = async (path, filter) => {
     let json = {}
     try {
       json = JSON.parse(fs.readFileSync(path, 'utf8'))
-    } catch (e) {}
+    } catch (e) { }
     if (json[N] == null) {
       json[N] = {}
     }
     for (const key in benchmarkResults) {
       if (!filter(key)) {
-        json[N][key] = benchmarkResults[key]
+        json[N][key] = { ...json[N][key], ...benchmarkResults[key] }
       }
     }
     fs.writeFileSync(path, JSON.stringify(json, null, 2))
@@ -129,14 +129,14 @@ export class CrdtFactory {
    * @param {function(Uint8Array|string):void} [updateHandler]
    * @return {AbstractCrdt}
    */
-  create (updateHandler) {
+  create(updateHandler) {
     error.methodUnimplemented()
   }
 
   /**
    * @return {string}
    */
-  getName () {
+  getName() {
     error.methodUnimplemented()
   }
 }
@@ -156,20 +156,20 @@ export class AbstractCrdt {
   /**
    * @param {function(Uint8Array|string):void} [updateHandler]
    */
-  constructor (updateHandler) {
+  constructor(updateHandler) {
   }
 
   /**
    * @return {Uint8Array|string}
    */
-  getEncodedState () {
+  getEncodedState() {
     error.methodUnimplemented()
   }
 
   /**
    * @param {Uint8Array|string} update
    */
-  applyUpdate (update) {
+  applyUpdate(update) {
     error.methodUnimplemented()
   }
 
@@ -179,7 +179,7 @@ export class AbstractCrdt {
    * @param {number} index
    * @param {Array<any>} elements
    */
-  insertArray (index, elements) {
+  insertArray(index, elements) {
     error.methodUnimplemented()
   }
 
@@ -189,14 +189,14 @@ export class AbstractCrdt {
    * @param {number} index
    * @param {number} length
    */
-  deleteArray (index, length) {
+  deleteArray(index, length) {
     error.methodUnimplemented()
   }
 
   /**
    * @return {Array<any>}
    */
-  getArray () {
+  getArray() {
     error.methodUnimplemented()
   }
 
@@ -206,7 +206,7 @@ export class AbstractCrdt {
    * @param {number} index
    * @param {string} text
    */
-  insertText (index, text) {
+  insertText(index, text) {
     error.methodUnimplemented()
   }
 
@@ -216,21 +216,21 @@ export class AbstractCrdt {
    * @param {number} index
    * @param {number} len
    */
-  deleteText (index, len) {
+  deleteText(index, len) {
     error.methodUnimplemented()
   }
 
   /**
    * @return {string}
    */
-  getText () {
+  getText() {
     error.methodUnimplemented()
   }
 
   /**
    * @param {function (AbstractCrdt): void} f
    */
-  transact (f) {
+  transact(f) {
     error.methodUnimplemented()
   }
 
@@ -238,14 +238,14 @@ export class AbstractCrdt {
    * @param {string} key
    * @param {any} val
    */
-  setMap (key, val) {
+  setMap(key, val) {
     error.methodUnimplemented()
   }
 
   /**
    * @return {Map<string,any> | Object<string, any>}
    */
-  getMap () {
+  getMap() {
     error.methodUnimplemented()
   }
 }

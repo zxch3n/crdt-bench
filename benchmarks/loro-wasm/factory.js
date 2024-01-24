@@ -1,8 +1,6 @@
 
 import { AbstractCrdt, CrdtFactory } from '../../js-lib/index.js' // eslint-disable-line
-import { Loro, LoroList, LoroMap, LoroText, setPanicHook, enableDebug } from 'loro-wasm'
-import { readFileSync } from 'fs'
-import path from 'path'
+import { Loro } from 'loro-crdt'
 
 export const name = 'loro-wasm'
 
@@ -36,13 +34,12 @@ export class LoroWasm {
     this.list = this.doc.getList('list')
     this.map = this.doc.getMap('map')
     this.text = this.doc.getText('text')
-    this.inTransact = false;
     this.cachedUpdates = [];
   }
 
   update() {
     if (this.updateHandler) {
-      this.updateHandler(this.doc.exportUpdates(this.version));
+      this.updateHandler(this.doc.exportFrom(this.version));
       this.version = this.doc.version();
     }
   }
@@ -51,7 +48,9 @@ export class LoroWasm {
    * @return {Uint8Array|string}
    */
   getEncodedState() {
-    return this.doc.exportUpdates()
+    const ans = this.doc.exportSnapshot()
+    // this.doc.diagnoseOplogSize();
+    return ans;
   }
 
   /**
@@ -61,7 +60,7 @@ export class LoroWasm {
     if (this.inTransact) {
       this.cachedUpdates.push(update);
     } else {
-      this.doc.importUpdates(update)
+      this.doc.import(update)
     }
   }
 
@@ -73,7 +72,7 @@ export class LoroWasm {
    */
   insertArray(index, elems) {
     for (let i = 0; i < elems.length; i++) {
-      this.list.insert(this.doc, index + i, elems[i])
+      this.list.insert(index + i, elems[i])
     }
     this.update()
   }
@@ -85,7 +84,7 @@ export class LoroWasm {
    * @param {number} len
    */
   deleteArray(index, len) {
-    this.list.delete(this.doc, index, len);
+    this.list.delete(index, len);
     this.update()
   }
 
@@ -93,7 +92,7 @@ export class LoroWasm {
    * @return {Array<any>}
    */
   getArray() {
-    return this.list.value
+    return this.list.toArray()
   }
 
   /**
@@ -103,7 +102,7 @@ export class LoroWasm {
    * @param {string} text
    */
   insertText(index, text) {
-    this.text.insert(this.doc, index, text);
+    this.text.insert(index, text);
     this.update()
   }
 
@@ -114,7 +113,7 @@ export class LoroWasm {
    * @param {number} len
    */
   deleteText(index, len) {
-    this.text.delete(this.doc, index, len);
+    this.text.delete(index, len);
     this.update()
   }
 
@@ -147,7 +146,7 @@ export class LoroWasm {
    * @param {any} val
    */
   setMap(key, val) {
-    this.map.set(this.doc, key, val);
+    this.map.set(key, val);
     this.update();
   }
 
@@ -155,6 +154,6 @@ export class LoroWasm {
    * @return {Map<string,any> | Object<string, any>}
    */
   getMap() {
-    return this.map.value
+    return Object.fromEntries(this.map.entries())
   }
 }

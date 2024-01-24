@@ -1,0 +1,18 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  automerge-wasm:
+    specifier: ^0.1.2
+    version: registry.npmmirror.com/automerge-wasm@0.1.2
+
+packages:
+
+  registry.npmmirror.com/automerge-wasm@0.1.2:
+    resolution: {integrity: sha512-gSIMCgJUewkbrhs92+lDIreYPSl85U+f6LXTZnPAsdf6Zv0sO/CWKYpbzCHbPxEA4DLUoZ6GFhNIJ+5FynDFPg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/automerge-wasm/-/automerge-wasm-0.1.2.tgz}
+    name: automerge-wasm
+    version: 0.1.2
+    dev: false

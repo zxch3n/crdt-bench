@@ -11,6 +11,6 @@
   "author": "Zixuan Chen",
   "license": "MIT",
   "dependencies": {
-    "loro-wasm": "../../../loro-rs/crates/loro-wasm"
+    "loro-crdt": "0.10.1"
   }
 }

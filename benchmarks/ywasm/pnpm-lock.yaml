@@ -1,0 +1,18 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  ywasm:
+    specifier: ^0.16.10
+    version: registry.npmmirror.com/ywasm@0.16.10
+
+packages:
+
+  registry.npmmirror.com/ywasm@0.16.10:
+    resolution: {integrity: sha512-nsoiKOD4rpBoWvwIfqTLo5cQcHh3d1gromzMkI1pBqg1Er4T+pl7Irs/Yg4i1QPQtTiKUWGPkVQnjcVE4zNyZQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ywasm/-/ywasm-0.16.10.tgz}
+    name: ywasm
+    version: 0.16.10
+    dev: false

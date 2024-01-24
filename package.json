@@ -12,8 +12,9 @@
     "clean": "rm -rf benchmarks/yjs/dist",
     "start:yjs": "cd benchmarks/yjs && npm start",
     "start:automerge": "cd benchmarks/automerge-wasm && npm start",
+    "start:loro": "cd benchmarks/loro-wasm && npm start",
     "start": "npm run start:yjs",
-    "table": "node bin/render-table.js benchmarks/results.json 6000 yjs automerge delta-crdt",
+    "table": "node bin/render-table.js benchmarks/results.json 6000 loro-wasm yjs automerge-wasm ywasm",
     "lint": "standard && tsc",
     "install": "cd benchmarks/yjs && npm i"
   },
